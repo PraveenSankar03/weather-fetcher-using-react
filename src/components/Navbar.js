@@ -1,15 +1,32 @@
 import './Navbar.css';
+import { useState, useEffect } from 'react';
 import { useNavigate, Link } from "react-router-dom";
 
 const Navbar = ({ city, SetCity, fetchWeather }) => {
+
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleTheme = () => {
+    setDarkMode(prev => !prev);
+  }
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.setAttribute("data-bs-theme", "dark");
+    } else {
+      document.body.setAttribute("data-bs-theme", "light");
+    }
+  },[darkMode]);
+
   const navigate = useNavigate();
+
   const updateCity = (e) => {
     SetCity(e.target.value);
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!city.trim()) return;
-
     await fetchWeather();
     navigate("/search");
   };
@@ -41,10 +58,17 @@ const Navbar = ({ city, SetCity, fetchWeather }) => {
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" to="/">
-                Link
+              <Link className="nav-link" to="/about">
+                About
               </Link>
             </li>
+            <button
+              type="button"
+              className="btn btn-outline-secondary ms-3"
+              onClick={toggleTheme}
+            >
+              {darkMode ? "Light mode" : "Dark mode"}
+            </button>
           </ul>
 
           <form className="d-flex" role="search" onSubmit={handleSubmit}>

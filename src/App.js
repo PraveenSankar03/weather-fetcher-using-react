@@ -2,6 +2,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Search from "./components/Search";
+import About from "./components/About";
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 
@@ -57,6 +58,7 @@ function App() {
           path="/search"
           element={<Search error={error} weather={weather} />}
         />
+        <Route path="/about" element={<About />} />
       </Routes>
     </div>
   );
