@@ -1,3 +1,4 @@
+import './Navbar.css';
 import { useNavigate, Link } from "react-router-dom";
 
 const Navbar = ({ city, SetCity, fetchWeather }) => {
