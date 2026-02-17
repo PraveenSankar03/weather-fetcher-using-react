@@ -1,10 +1,18 @@
 import { useNavigate, Link } from "react-router-dom";
 
-const Navbar = ({city, SetCity}) => {
+const Navbar = ({city, SetCity, fetchWeather}) => {
+    
+    const navigate = useNavigate()
 
     const updateCity = (e) => {
         SetCity(e.target.value);
     };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (!city.trim()) return;
+        navigate('/search');
+    }
 
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -51,11 +59,12 @@ const Navbar = ({city, SetCity}) => {
               placeholder="Search"
               aria-label="Search"
               value = {city}
-              onChange={SetCity}
+              onChange={updateCity}
             />
             <button
               className="btn btn-outline-success"
               type="submit"
+              onClick={fetchWeather}
             >
               Search
             </button>
