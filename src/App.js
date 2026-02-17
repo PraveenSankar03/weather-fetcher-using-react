@@ -12,13 +12,16 @@ function App() {
 
   const fetchWeather = async () => {
     try {
+      SetError("")
+      SetWeather(null)
+
       const geoApi = await fetch(
         `https://geocoding-api.open-meteo.com/v1/search?name=${city}&count=1`,
       );
       const geoData = await geoApi.json();
 
       if (!geoData.results || geoData.results.length == 0) {
-        SetError("city not found");
+        SetError("City not found. Try something else.");
         return;
       }
 
@@ -35,6 +38,8 @@ function App() {
         country,
         temperature: weatherData.current.temperature_2m,
         wind: weatherData.current.wind_speed_10m,
+        latitude: latitude,
+        longitude: longitude,
       });
       
     } catch (error) {

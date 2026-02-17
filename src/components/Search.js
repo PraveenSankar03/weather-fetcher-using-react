@@ -8,9 +8,11 @@ const Search = ({ weather, error }) => {
   return (
     <div>
       <div className="details">
-        <h1>City: {weather.city}, {weather.country}</h1>
-        <h3>Temperature: {weather.temperature}°C</h3>
-        <h4>Wind: {weather.wind} km/h</h4>
+        <h1>City: {weather.city}, {weather.country}.</h1>
+        <h4>Temperature: {weather.temperature}°C</h4>
+        <h4>Wind speed: {weather.wind} km/h</h4>
+        <h4>latitude: {weather.latitude}</h4>
+        <h4>longitude: {weather.longitude}</h4>
       </div>
     </div>
   );

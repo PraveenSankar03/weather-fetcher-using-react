@@ -6,9 +6,11 @@ const Navbar = ({ city, SetCity, fetchWeather }) => {
   const updateCity = (e) => {
     SetCity(e.target.value);
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!city.trim()) return;
+
+    await fetchWeather();
     navigate("/search");
   };
   return (
@@ -57,7 +59,6 @@ const Navbar = ({ city, SetCity, fetchWeather }) => {
             <button
               className="btn btn-outline-success"
               type="submit"
-              onClick={fetchWeather}
             >
               Search
             </button>
