@@ -3,7 +3,14 @@ import "./About.css";
 const About = () => {
   return (
     <div className="container">
-      <h2 className="intro">Hi, I'm Praveen.</h2>
+      <h1 className="intro">Hi, I'm Praveen.</h1>
+      <p>
+        I'm a Web developer. I've did this little fun project to learn more about React and APIs.
+      </p>
+      <p>
+        Please Check out my GitHub profile.
+      </p>
+      <br></br>
       <h1>About Weather.io</h1>
       <p>
         <ul className="info">
