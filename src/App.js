@@ -17,11 +17,11 @@ function App() {
       SetWeather(null)
 
       const geoApi = await fetch(
-        `https://geocoding-api.open-meteo.com/v1/search?name=${city}&count=1`,
+        `https://geocoding-api.open-meteo.com/v1/search?name=${city}&count=1`
       );
       const geoData = await geoApi.json();
 
-      if (!geoData.results || geoData.results.length == 0) {
+      if (!geoData.results || geoData.results.length === 0) {
         SetError("City not found. Try something else.");
         return;
       }

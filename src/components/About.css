@@ -11,7 +11,12 @@
     margin-top: 20px;
 }
 
+.info {
+    padding-top: 10px;
+}
+
 .end {
     text-align: center;
     padding-top: 20px;
+    padding-bottom: 20px;
 }
