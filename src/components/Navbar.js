@@ -64,7 +64,7 @@ const Navbar = ({ city, SetCity, fetchWeather }) => {
             </li>
             <button
               type="button"
-              className="btn btn-outline-secondary ms-3"
+              className="btn btn-outline-secondary ms-3 button"
               onClick={toggleTheme}
             >
               {darkMode ? "Light mode" : "Dark mode"}

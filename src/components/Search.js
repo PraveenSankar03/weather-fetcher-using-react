@@ -9,7 +9,7 @@ const Search = ({ weather, error }) => {
     <div>
       <div className="details">
         <h1>City: {weather.city}, {weather.country}.</h1>
-        <h4>Temperature: {weather.temperature}°C</h4>
+        <h4>Current Temperature: {weather.temperature}°C</h4>
         <h4>Wind speed: {weather.wind} km/h</h4>
         <h4>latitude: {weather.latitude}</h4>
         <h4>longitude: {weather.longitude}</h4>
