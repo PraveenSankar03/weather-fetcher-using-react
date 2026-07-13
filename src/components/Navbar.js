@@ -55,11 +55,20 @@ const Navbar = ({ city, SetCity, fetchWeather }) => {
                 Home
               </Link>
             </li>
-
             <li className="nav-item">
               <Link className="nav-link" to="/about">
                 About
               </Link>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="https://github.com/PraveenSankar03" target='blank'>
+                GitHub
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="https://portfolio-praveen03.vercel.app/" target='blank'>
+                Portfolio
+              </a>
             </li>
             <button
               type="button"

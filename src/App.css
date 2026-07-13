@@ -144,6 +144,7 @@ body[data-bs-theme="dark"]::after { display: block; }
   font-weight: 500;
   position: relative;
   transition: color .25s var(--ease);
+  margin-left: 12px;
 }
 .nav-link:hover, .nav-link.active { color: var(--text-hi) !important; }
 .nav-link.active::after {
