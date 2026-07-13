@@ -29,7 +29,7 @@ function App() {
       const { latitude, longitude, name, country } = geoData.results[0];
 
       const weather = await fetch(
-        `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,wind_speed_10m&timezone=auto`,
+        `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,wind_speed_10m&timezone=auto`
       );
 
       const weatherData = await weather.json();

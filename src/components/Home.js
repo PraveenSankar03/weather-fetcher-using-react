@@ -1,5 +1,3 @@
-import './Home.css';
-import { Link } from 'react-router-dom';
 import { FaGithub, FaEnvelope } from "react-icons/fa";
 
 const Home = () => {
@@ -7,18 +5,18 @@ const Home = () => {
     <>
     <div>
         <h1 className="topic">Welcome to weather.io</h1>
-        <h4 className="sub-topic">find the current weather of cities. Search it in the Search Bar.</h4>
+        <h4 className="sub-topic">Find the current weather of cities. Search it in the Search Bar.</h4>
     </div>
     <div>
       <h4 className='contact'>Contact Me:</h4>
         <div className="social-icons">
-          <Link to="https://github.com/PraveenSankar03"
+          <a href="https://github.com/PraveenSankar03"
           target='blank'>
             <FaGithub />
-          </Link>
-          <Link to="mailto:praveensankar3333@gmail.com">
+          </a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=praveensankar3333@gmail.com" target='blank'>
             <FaEnvelope />
-          </Link>
+          </a>
         </div>
     </div>
     </>

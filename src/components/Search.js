@@ -1,4 +1,3 @@
-import './Search.css';
 
 const Search = ({ weather, error }) => {
 

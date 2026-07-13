@@ -1,5 +1,3 @@
-import "./About.css";
-
 const About = () => {
   return (
     <div className="container">
@@ -88,7 +86,6 @@ const About = () => {
           </li>
         </ul>
       </p>
-      <h1 className="end">Thanks !</h1>
     </div>
   );
 };
