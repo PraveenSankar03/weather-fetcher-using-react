@@ -1,4 +1,3 @@
-
 const Search = ({ weather, error }) => {
 
   if (error) return <h2 className="topic">{error}</h2>;
@@ -16,4 +15,5 @@ const Search = ({ weather, error }) => {
     </div>
   );
 };
+
 export default Search;

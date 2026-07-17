@@ -3,10 +3,10 @@ const About = () => {
     <div className="container">
       <h1 className="intro">Hi, I'm Praveen.</h1>
       <p>
-        I'm a Web developer. I've did this little fun project to learn more about React and APIs.
+        I'm a Web developer. I've did this little fun project to learn more about APIs.
       </p>
       <p>
-        Please Check out my GitHub profile.
+        Please Check out my Portfolio and my GitHub profile.
       </p>
       <br></br>
       <h1>About Weather.io</h1>
@@ -86,6 +86,8 @@ const About = () => {
           </li>
         </ul>
       </p>
+      <br></br>
+      <h1>Thanks for checking this out !</h1>
     </div>
   );
 };

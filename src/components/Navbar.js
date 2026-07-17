@@ -3,10 +3,10 @@ import { useNavigate, Link } from "react-router-dom";
 
 const Navbar = ({ city, SetCity, fetchWeather }) => {
 
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   const toggleTheme = () => {
-    setDarkMode(prev => !prev);
+    setDarkMode(curr => !curr);
   }
 
   useEffect(() => {
@@ -29,6 +29,8 @@ const Navbar = ({ city, SetCity, fetchWeather }) => {
     await fetchWeather();
     navigate("/search");
   };
+
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -68,6 +70,11 @@ const Navbar = ({ city, SetCity, fetchWeather }) => {
             <li className="nav-item">
               <a className="nav-link" href="https://portfolio-praveen03.vercel.app/" target='blank'>
                 Portfolio
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=praveensankar3333@gmail.com" target='blank'>
+                Contact me
               </a>
             </li>
             <button
